@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "ChromeExtensionNg8",
+  "description": "ChromeExtensionNg8",
+  "version": "1",
+  "web_accessible_resources": ["assets/*"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "background": {
+    "scripts": ["background.bundle.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Open Popup!",
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon@3x.png",
+    "128": "assets/icon@8x.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "background",
+    "webNavigation",
+    "webRequest",
+    "storage"
+  ],
+  "options_ui": {
+    "page": "index.html",
+    "open_in_tab": false
+  }
+}

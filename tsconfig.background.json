@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/background",
+    "types": ["chrome"]
+  },
+  "exclude": ["test.ts", "main.ts", "**/*.spec.ts", "**/app/**/*.ts"]
+}
